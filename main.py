@@ -5,11 +5,11 @@ import time
 
 class groupingSensors:
 
-    def run_potensio_sensor():
-        call(["python", "potensio.py"])
+    # def run_potensio_sensor():
+    #     call(["python", "potensio.py"])
 
-    # def run_dht_sensor2():
-    #     call(["python", "sensorB.py"])
+    def run_dht_sensor2():
+        call(["python", "sensor-dht11.py"])
 
     def run_hcsr04_sensor3():
         call(["python", "sensor-hcsr04.py"])
@@ -17,20 +17,20 @@ class groupingSensors:
 if __name__ == "__main__":
 
     # Listing threads
-    sensor1 = threading.Thread(target = groupingSensors.run_potensio_sensor, name = "sensor1")
-    # sensor2 = threading.Thread(target = groupingSensors.run_potensio_sensor, name = "sensor2")
+    # sensor1 = threading.Thread(target = groupingSensors.run_potensio_sensor, name = "sensor1")
+    sensor2 = threading.Thread(target = groupingSensors.run_dht_sensor2, name = "sensor2")
     sensor3 = threading.Thread(target = groupingSensors.run_hcsr04_sensor3, name = "sensor3")
 
     # Starting threads
-    sensor1.start()
-    # sensor2.start()
+    # sensor1.start()
+    sensor2.start()
     sensor3.start()
 
     # Joining threads
-    sensor1.join()
-    # sensor2.join()
+    # sensor1.join()
+    sensor2.join()
     sensor3.join()
 
     # Looping
-    time.sleep(1)
+    time.sleep(3)
 
