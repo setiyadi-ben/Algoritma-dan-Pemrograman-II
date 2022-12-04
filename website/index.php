@@ -25,6 +25,12 @@
         <h2>Web Monitoring Sensor Raspberry Pi 3</h2>
         <p>Memonitor Jarak, Suhu dan Temperatur dan menggunakan styling dengan CDN Bootstrap 5</p>
 
+        <div class="d-flex justify-content-center dashboard">
+        <div class="p-2 black">cm</div>
+        <div class="p-2 dark">C</div>
+        <div class="p-2 dark">%</div>
+        </div>
+
         <table class="table table-dark table-hover align-content-end">
             <thead>
                 <tr>
