@@ -60,3 +60,51 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
 ```url
   192.168.XXX.xxx/phpmyadmin
 ```
+### Membuat Database Baru dan Menkonfigurasi Previleges
+
+- Setelah berhasil login, buat database baru dengan klik **"New"**. Kemudian isi field untuk nama dan **Create**. Ingat - ingat untuk kotak biru !
+
+  [![Screenshot-3.png](https://i.postimg.cc/0ycfg3P7/Screenshot-3.png)](https://postimg.cc/JsHJZpyh)
+
+- Setelah database terbuat, cek bagian previlegesnya apakah terdapat error seperti gambar dibawah ini.
+
+  [![Screenshot-4.png](https://i.postimg.cc/XvMBZkjp/Screenshot-4.png)](https://postimg.cc/Hr2kR57g)
+
+- Untuk memperbaiki error tersebut, klik logo **phpMyAdmin** > ganti **server connection collation** sama dengan yang dikotak biru sebelumnya. Cek kembali database tersebut untuk memastikan error pada privilegesnya sudah terselesaikan.
+
+  [![Screenshot-5.png](https://i.postimg.cc/8kF2PR02/Screenshot-5.png)](https://postimg.cc/jCbgM7Kc)
+
+### Bermain - main di database
+
+### Test koneksi Python MySQL Connector
+
+- Langkah ini berfungsi untuk mengecek apakah python kalian gunakan sudah terhubung dengan MySQL agar dapat memanipulasi database yang telah dibuat dengan menggunakan bahasa python.
+- Untuk melakukan test koneksi diperlukan menginstal MySQL driver terlebih dahulu bisa menggunakan perintah dibawah ini.
+  ```bash
+  sudo python -m pip install mysql-connector-python
+  ```
+- Untuk mengetesnya kalian tuliskan perintah program dibawah ini (Referensi : [W3Schools](https://www.w3schools.com/python/python_mysql_getstarted.asp)).
+  ```bash
+  sudo nano demo_mysql_test.py
+  ```
+  ```python
+  import mysql.connector
+
+  mydb = mysql.connector.connect(
+    host="localhost",
+    user="yourusername",
+    password="yourpassword"
+  )
+
+  print(mydb) 
+  ```
+  ```bash
+  python demo_mysql_test.py
+  ```
+- Jika terdapat error pada saat melakukan testing, uninstal driver tadi dan ikuti langkah dibawah ini (Referensi : [StackOverflow](https://stackoverflow.com/questions/73244027/character-set-utf8-unsupported-in-python-mysql-connector)).
+  ```bash
+  sudo pip uninstall mysql-connector-python
+  sudo pip3 install mysql-connector-python==8.0.29
+  ```
+  ### Mentransfer Value Sensor kedalam Database MySQL
+- (berlanjut)
