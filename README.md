@@ -60,7 +60,7 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
 ```url
   192.168.XXX.xxx/phpmyadmin
 ```
-### Membuat Database Baru dan Menkonfigurasi Previleges
+### Membuat Database dan Tabel MySQL Baru dan Menkonfigurasi Previleges
 
 - Setelah berhasil login, buat database baru dengan klik **"New"**. Kemudian isi field untuk nama dan **Create**. Ingat - ingat untuk kotak biru !
 
@@ -74,7 +74,13 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
 
   [![Screenshot-5.png](https://i.postimg.cc/8kF2PR02/Screenshot-5.png)](https://postimg.cc/jCbgM7Kc)
 
-### Bermain - main di database
+- Cek previleges dengan cara klik database kemudian pilih "Previleges". Jika tidak error maka langkah tersebut berhasil.
+
+   [![Screenshot-5.png](https://i.ibb.co/MhhjFd0/Screenshot-6.png)](https://ibb.co/JddbDZJ)
+
+- Untuk membuat sebuah tabel baru pada database klik New. Kemudian, isikan data sebagai berikut :
+
+    [![Screenshot-8.png](https://i.postimg.cc/Bvb5mcNR/Screenshot-8.png)](https://postimg.cc/QBLWt72q)
 
 ### Test koneksi Python MySQL Connector
 
@@ -106,5 +112,17 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
   sudo pip uninstall mysql-connector-python
   sudo pip3 install mysql-connector-python==8.0.29
   ```
-  ### Mentransfer Value Sensor kedalam Database MySQL
-- (berlanjut)
+### Mentransfer Value Sensor kedalam Database MySQL
+
+- Untuk mentransfernya, diperlukan sebuah perintah query SQL. Untuk sintaks programmnya terdapat pada file dengan nama "mysqlinsert_main.py". Dalam sintaks tersebut sensor yang diinputkan berupa sensor HC-SR04 dan DHT11. Dibawah ini merupakan potongan query SQL dari file mysqlinsert_main.py.
+  ```sql
+  sql = "INSERT INTO tabelSensor (datetimes, hcsr, temp, humi) VALUES (%s, %s, %s, %s)"
+  val = ((formatted_date), (dist), (temperature), (humidity))
+  ```
+- Jika berhasil data yang telah masuk akan terlihat seperti demikian.
+
+  [![Screenshot-9.png](https://i.postimg.cc/VkQZdTf4/Screenshot-9.png)](https://postimg.cc/jLc41MJJ)
+
+### Menampilkan data tabel MySQL dalam Website berupa tabel
+
+- berlanjut
