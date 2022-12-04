@@ -89,7 +89,7 @@ if __name__ == "__main__":
         print ("Measured Distance = %.1f cm" % dist)
         time.sleep(4)
         
-        sql = "INSERT INTO tabelSensor (datetime, hcsr, temp, humi) VALUES (%s, %s, %s, %s)"
+        sql = "INSERT INTO tabelSensor (datetimes, hcsr, temp, humi) VALUES (%s, %s, %s, %s)"
         val = ((formatted_date), (dist), (temperature), (humidity))
         mycursor.execute(sql, val)
         

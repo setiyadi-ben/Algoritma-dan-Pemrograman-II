@@ -11,7 +11,7 @@ now = datetime.datetime.now()
 formatted_date = now.strftime('%Y-%m-%d %H:%M:%S')
 mycursor = mydb.cursor()
 
-sql = "INSERT INTO tabelSensor (datetime, hcsr, temp, humi) VALUES (%s, %s, %s, %s)"
+sql = "INSERT INTO tabelSensor (datetimes, hcsr, temp, humi) VALUES (%s, %s, %s, %s)"
 val = [
 ((formatted_date), "10.5", "26.2", "77.7"),
 ((formatted_date), "15.4", "28.7", "79.3"),
