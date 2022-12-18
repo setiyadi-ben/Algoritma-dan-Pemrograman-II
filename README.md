@@ -131,5 +131,17 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
   sudo chmod -R a+rwx /var/www
   ``` 
 - Pindahkan file tersebut menggunakan SFTP, disini Saya gunakan Bitvise SSH.
+  
+  [![Screenshot-10.png](https://i.postimg.cc/bN60JC9L/Screenshot-10.png)](https://postimg.cc/XpCB1ghy)
 
-- Kemudian kita pastekan file tersebut kedalam folder /var/www/html lewat VNC Viewer
+- Kemudian kita pastekan file tersebut kedalam folder /var/www/html lewat VNC Viewer. Namun, sebelum itu kalian bisa cari file kalian terlebih dahulu, berikut contoh lokasi direktori Saya.
+
+  [![Screenshot-11.png](https://i.postimg.cc/SQckkHkF/Screenshot-11.png)](https://postimg.cc/8skqbK7t)
+
+  [![Screenshot-12.png](https://i.postimg.cc/hPCwB0zR/Screenshot-12.png)](https://postimg.cc/tYxDdWNB)
+
+- Berikut tampilan halaman web php untuk memunculkan tabel dari MySQL table.
+
+  [![Screenshot-13.png](https://i.postimg.cc/c4jp3msM/Screenshot-13.png)](https://postimg.cc/TpVNMn5p)
+
+- Berikut tampilan lengkap halaman web php untuk memunculkan tabel dari MySQL table beserta dashboard.
