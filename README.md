@@ -125,4 +125,11 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
 
 ### Menampilkan data tabel MySQL dalam Website berupa tabel
 
-- berlanjut
+- Untuk melakukan ini diperlukan file HTML dengan sintaks PHP untuk merequest data dari database. Untuk mengaksesnya, kalian bisa menyalin file dalam folder website yang dapat kalian modifikasi sendiri.
+- Kemudian untuk dapat diakses melalui web kita memperlukan perubahan perizinan pada direktori */var/www/html* . Kita bisa rubah perizinan dengan mengetikan perintah seperti berikut.
+  ```bash
+  sudo chmod -R a+rwx /var/www
+  ``` 
+- Pindahkan file tersebut menggunakan SFTP, disini Saya gunakan Bitvise SSH.
+
+- Kemudian kita pastekan file tersebut kedalam folder /var/www/html lewat VNC Viewer
