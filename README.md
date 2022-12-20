@@ -170,6 +170,7 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
 
 - Jangan kaget bila saat mengetikan perintah hostname -I punya kalian hanya memunculkan 1 alamat ip saja. Di kasus Saya, raspberry pi terhubung dengan bridged lan ip dari laptop dan satunya terhubung dengan hotspot WiFi. Saat kalian temukan alamat ipnya, karena satu network address jadi dapat diakses melalui hp seperti dibawah ini.
 
+
 <div style="text-align: center;">
   <img src="https://i.postimg.cc/637WdGmy/photo-6129802592600045213-y.jpg" alt="alt text">
 </div>
