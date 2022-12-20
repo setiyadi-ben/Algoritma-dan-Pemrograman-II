@@ -1,8 +1,10 @@
+<div style="text-align: center;">
+  <img src="https://i.postimg.cc/7PC7DqkN/algo-prog-samples.png" alt="alt text">
+</div>
 
 # How to Melakukan "Praktikum"
 
 Repositori ini adalah dokumentasi dari proses praktikum dari matakuliah Algoritma dan Pemrograman II. Berikut di bawah ini merupakan langkah - langkah agar dapat mengerjakan praktikum secara lebih efisien.
-
 
 ### Alat dan Bahan
 
@@ -15,6 +17,7 @@ Berikut alat dan bahan yang akan digunakan, antaralain:
 - Project Board
 - Kabel Jumper
 - Multimeter
+- VMWare Workstation (Bila ingin simulasi diluar lab. Bisa **[download disini](https://drive.google.com/file/d/1x3dDzJUw83g2zxjhQGPQmYkyewrtXbEB/view?usp=sharing)**)
 
 Oiya, untuk memudahkan dalam pemasangan sensor pada praktikum selanjutnya **usahakan memiliki kabel jumper sendiri**. Dengan melakukan **pelabelan** pada setiap jumper dengan menuliskan nomor pin GPIOnya akan menghemat waktu sekitar 10 s/d 15 menit.
 
@@ -27,6 +30,14 @@ Oiya, untuk memudahkan dalam pemasangan sensor pada praktikum selanjutnya **usah
  3.Kemudian klik Choose OS > Use custom (scroll kebawah) > pilih Raspbian OS yang didownload tadi.
 
  4.Klik write dan tunggu hingga selesai, setelah itu masukkan microSD kedalam Raspberry Pi.
+
+### Pinout Raspberrry Pi 3 Model B+
+
+<div style="text-align: center;">
+  <img src="https://i.postimg.cc/tTDYtmWD/Raspberry-Pi-Pinout.jpg" alt="alt text">
+</div>
+
+- Untuk pinout ke sensor bisa dilakukan bebas dikarenakan pin - pin yang berada pada Raspberry Pi bertipe GPIO (General Purpose I/O). 
 
 ### Code untuk Sensor
 
@@ -54,7 +65,7 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
 
 - Ketikkan ini untuk mengetahui ip Raspberry server
 ```bash
-  Hostname -I
+  hostname -I
 ```
 - Masukkan ip 192.168.XXX.XX tadi dalam browser dengan menulis phpmyadmin untuk mengakses database tadi menggunakan username dan password yang telah dibuat tadi.
 ```url
@@ -126,6 +137,15 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
 ### Menampilkan data tabel MySQL dalam Website berupa tabel
 
 - Untuk melakukan ini diperlukan file HTML dengan sintaks PHP untuk merequest data dari database. Untuk mengaksesnya, kalian bisa menyalin file dalam folder website yang dapat kalian modifikasi sendiri.
+
+- Jika kalian menggunakan setelan data sql tabel yang sama (id, datetimes, hcsr, temp, humi) kalian tinggal ganti yang dikotak merah.
+
+  [![Screenshot-15.png](https://i.postimg.cc/Wzr3gJHs/Screenshot-15.png)](https://postimg.cc/bSypjdP5)
+
+  [![Screenshot-17.png](https://i.postimg.cc/y6PY4sCQ/Screenshot-17.png)](https://postimg.cc/xqXSLrCM)
+
+  [![Screenshot-16.png](https://i.postimg.cc/QCn286bt/Screenshot-16.png)](https://postimg.cc/ctw9TBPy)
+
 - Kemudian untuk dapat diakses melalui web kita memperlukan perubahan perizinan pada direktori */var/www/html* . Kita bisa rubah perizinan dengan mengetikan perintah seperti berikut.
   ```bash
   sudo chmod -R a+rwx /var/www
@@ -145,3 +165,17 @@ Silahkan dicari ada diatas, untuk sensor yang working hanya kedua itu saja dan p
   [![Screenshot-13.png](https://i.postimg.cc/c4jp3msM/Screenshot-13.png)](https://postimg.cc/TpVNMn5p)
 
 - Berikut tampilan lengkap halaman web php untuk memunculkan tabel dari MySQL table beserta dashboard.
+
+  [![Screenshot-14.png](https://i.postimg.cc/SQYg2NDR/Screenshot-14.png)](https://postimg.cc/hhgLNgFR)
+
+- Jangan kaget bila saat mengetikan perintah hostname -I punya kalian hanya memunculkan 1 alamat ip saja. Di kasus Saya, raspberry pi terhubung dengan bridged lan ip dari laptop dan satunya terhubung dengan hotspot WiFi. Saat kalian temukan alamat ipnya, karena satu network address jadi dapat diakses melalui hp seperti dibawah ini.
+
+<div style="text-align: center;">
+  <img src="https://i.postimg.cc/637WdGmy/photo-6129802592600045213-y.jpg" alt="alt text">
+</div>
+
+# TERIMA KASIH
+
+<div style="text-align: center;">
+  <img src="https://i.postimg.cc/6QgWhJm9/algo-prog-samples-1.png" alt="alt text">
+</div>
